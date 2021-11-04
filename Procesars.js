@@ -34,7 +34,7 @@ function NombreUsuario (datos)
     recibeaux2 = recibeaux[1].split("-")
 
     recibe = `R:${recibeaux2[0]} -- `
-    console.log(recibe);
+    
 
     
   }
@@ -58,41 +58,43 @@ let aux;
     aux = datos.split("hs.");
     
   }
-
-console.log(aux[1])
    
 
-  var ningun= "Ningún mensaje por aquí.";
-  var ningun1= "Tu comprador te escribió.";
-  var ningun2= "No tenés mensajes nuevos.";
-  var ningun3= "No tienes mensajes";
+  var ningun= "Ver mensajes";
+  var ningun1= "Ver mensaje nuevo";
+
 
   var str = aux[1];
   var n ;
   
-
   
 if (str.indexOf(ningun)>0) aux2= aux[1].split(ningun);
 if (str.indexOf(ningun1)>0) aux2= aux[1].split(ningun1);
-if (str.indexOf(ningun2)>0) aux2= aux[1].split(ningun2);
-if (str.indexOf(ningun3)>0) aux2= aux[1].split(ningun3);
+
+
+
 
 
 aux3=aux2[0].split("\n");
+var UsuarioParte =[];
+var cant =0
 
-
-if (aux3[0].length>10)
+for (var i=0;i<aux3.length;i++)
 {
-  console.log(recibe +"-- "+ aux3[0]);
-return recibe + aux3[0];
+  if (aux3[i].length>4) 
+  {
+    UsuarioParte [cant] = aux3[i];
+    cant++;     
+  }
+  
 }
 
-else
-{
-  console.log(recibe + aux3[1]);
+console.log(UsuarioParte[0]);
+console.log(UsuarioParte[1]);
 
-return recibe + aux3[1];
-}
+console.log(recibe + UsuarioParte[0] +" | "+ UsuarioParte[1]);
+
+return recibe + UsuarioParte[0] +" | "+ UsuarioParte[1];
 
 
 }
