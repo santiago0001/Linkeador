@@ -38,6 +38,24 @@ function NombreUsuario (datos)
 
     
   }
+
+  else if (datos.indexOf("Retira:")>0)
+  {
+    console.log("ENTRO EN BUSQUEDA DE quien retira");
+    recibeaux= datos.split("Retira:")
+
+    console.log(recibeaux)
+    recibeaux2 = recibeaux[1].split("\n")
+
+    recibe = `R:${recibeaux2[0]} -- `
+    
+
+    
+  }
+
+
+
+
   else {
     recibe= " "
   }
@@ -62,6 +80,7 @@ let aux;
 
   var ningun= "Ver mensajes";
   var ningun1= "Ver mensaje nuevo";
+  var ningun2= "Iniciar conversación";
 
 
   var str = aux[1];
@@ -70,9 +89,8 @@ let aux;
   
 if (str.indexOf(ningun)>0) aux2= aux[1].split(ningun);
 if (str.indexOf(ningun1)>0) aux2= aux[1].split(ningun1);
-
-
-
+if (str.indexOf(ningun2)>0) aux2= aux[1].split(ningun2);
+console.log(aux2)
 
 
 aux3=aux2[0].split("\n");

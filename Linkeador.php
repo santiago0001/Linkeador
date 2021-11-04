@@ -33,7 +33,7 @@
 <h4> <center><p id="SaludoHorario" ></p></center></h4>
 </div>
 <!--  method="POST" name="formInsert" action="CargarDatos.php" -->
-<!-- <form   method="POST" name="formInsert" action="CargarDatos.php"  > -->
+  <form   method="POST" name="formInsert" action="CargarDatos.php"  >
 <script src="FuncionesGenerales.js"></script>
 <script src="Procesars.js"></script>
 <script src="LimpiarDatosBrutos.js"></script>
@@ -57,7 +57,7 @@
 </div> 
 
 
- <!--</form> -->
+</form> 
 
 <form class="nuevoRegVacio">
 <div class"nuevoRegVacio">
