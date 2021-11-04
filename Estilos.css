@@ -1,0 +1,137 @@
+.body {
+    background-color: #e6c090; 
+    width:100%;
+    background-image: url('fin.png');
+}
+
+
+.nav-enlace {
+
+    display: inline-block;
+    background:  #6fdfb0 ;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+
+
+
+
+}
+
+.nav-enlaceSelect {
+
+    display: inline-block;
+    background:  #389e88 ;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+
+
+
+
+}
+
+.nav-enlace:hover {
+
+    background:    #A3F40C;
+}
+
+nav {
+    background: #54cebd;
+    padding: 5px;
+
+}
+
+.Fecha{
+    margin: 0;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.TituloRegistroCompras{
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background-color: #54cebd;
+    transform: translate(-50%, -50%);
+}
+
+.FormBrutos{
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+  
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+.FormBrutos2{
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+.oculto {
+    display: none;
+}
+
+.Linea{
+background-color: #e6c090;
+
+}
+
+.Datos {
+background-color: rgb(230, 166, 30);
+
+}
+.nuevoRegVacio {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 85%;
+  
+    transform: translate(-50%, -50%);
+
+
+}
+
+.FormCargaDatos{
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+
+}
+
+.COPY
+{
+    
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 48%;
+  
+}
+
+.entrada {
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
