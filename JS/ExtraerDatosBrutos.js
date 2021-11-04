@@ -3,6 +3,8 @@
 //PASAS LOS DATOS BRUTOS DE ML Y TE DEVUELVE EL NOMBRE
 function NombreUsuario (datos)
 {
+
+  console.log("ECONTRO QUIEN RECIBE");
   var aux,aux2,aux3 ;
   var usuario;
   var imprimir="Imprimir datos";

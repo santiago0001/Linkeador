@@ -1,6 +1,8 @@
 
 
 function Procesar() {
+  
+  console.log("ENTRO EN PROCESO");
 var datos =document.getElementById('idcomment').value;
 var nombre= NombreUsuario (datos);
 var Metodo= metodo (datos);
@@ -19,18 +21,22 @@ document.getElementById('idTipo').value= TipoProd;
 
 function NombreUsuario (datos)
 {
-
+  console.log("ENTRO EN BUSQUEDA DE NOMBRE");
+  
   var recibeaux;
   var recibeaux2;
   var recibe;
 
   if (datos.indexOf("Recibe:")>0)
   {
+    console.log("ENTRO EN BUSQUEDA DE quien recibe");
     recibeaux= datos.split("Recibe:")
     recibeaux2 = recibeaux[1].split("-")
 
     recibe = `R:${recibeaux2[0]} -- `
     console.log(recibe);
+
+    
   }
   else {
     recibe= " "
@@ -49,11 +55,11 @@ let aux;
     
   }
   else {
-    aux = datos.split("hs. |\n");
+    aux = datos.split("hs.");
     
   }
 
-
+console.log(aux[1])
    
 
   var ningun= "Ningún mensaje por aquí.";

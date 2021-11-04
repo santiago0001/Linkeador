@@ -112,6 +112,7 @@ $query = mysqli_query($conexion,$insetar);
 
 
 <script>
+ 
 
   //CARGO LA FECHA DEL DIA
 fecha ();
