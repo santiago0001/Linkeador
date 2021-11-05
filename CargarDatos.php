@@ -122,13 +122,101 @@ document.getElementById("DatosBrutos").style.visibility = "hidden";
 
 // VUELCO LOS DATOS EN EL BUTTON DATOS BRUTOS
 var datos= document.getElementById('DatosBrutos').value
+function telefono2 (datos)
+{    
+    if (datos.indexOf("Tel.: ")>0) 
+{
+  
+  var aux,aux2 ;
+  var telefono;
+
+  aux = datos.split("Tel.: "); 
+
+  if (datos.indexOf("Datos para su factura")>0) 
+  {
+    aux2= aux[1].split("Datos para su factura");
+    telefono = aux2 [0];
+  }
+  else if (datos.indexOf("Factura")>0) 
+  {
+    aux2= aux[1].split("Fact");
+    telefono = aux2 [0];
+  }
+  
+  console.log(telefono)
+
+
+  
+if (telefono[0]==='0') {
+  var tel = telefono.replace(/0/, "");
+}
+else {
+  tel=telefono;
+}
+}
+
+else
+{
+tel="";
+
+}
+
+return tel;
+}
+
+
+function DatosDeEnvio2 (Datos) {
+    var flex="Envío rápido a domicilio\n";
+    var pend ="Envío Pendiente"
+
+    var aux,aux2,aux3, aux4,dire;
+  
+    if (Datos.indexOf(flex)>0)
+    {  
+    aux = Datos.split(flex);
+    }
+    else if (Datos.indexOf(pend)>0) {
+        aux = Datos.split("Datos del envío\n");
+
+    }
+    else {return ""}
+   
+    
+    if (datos.indexOf("Datos para su factura")>0) 
+  {
+    aux2 = aux[1].split("Datos para su factura");
+  }
+  else if (datos.indexOf("Factura")>0) 
+  {
+    aux2= aux[1].split("Fact");
+    
+  }
+
+    
+    
+    aux3= aux2[0].split("\n");
+  
+    
+    for (var i=0; i<aux3.length;i++)
+    {
+      aux4+= aux3[i]+" - "
+  
+    }
+    dire = aux4.split("undefined");
+  
+   return dire[1];
+  
+   console.log (aux4);
+  
+  }
+  
 
 
 //SACO EL NOMBRE DE TODOS LOS DATOS
 var NombreCliente= document.getElementById('NOM').value
 var NombreCorto= CortarNombre(NombreCliente);
-var Telefono =telefono (datos);
-var DatosEnvio = DatosDeEnvio (datos);
+var Telefono =telefono2 (datos);
+var DatosEnvio = DatosDeEnvio2 (datos);
 var Metodo = document.getElementById('METODO').value
 var Precio = Precio (datos);
 var Cantidad = CantidadComprada(datos);

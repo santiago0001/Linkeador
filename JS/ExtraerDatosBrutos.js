@@ -51,34 +51,7 @@ return aux3[1];
 
 
 //SACAR EL NUMERO DE TELEFONO DE LOS DATOS BRUTOS
-function telefono (datos)
-{    
-    if (datos.indexOf("Tel.: ")>0) 
-{
-  
-  var aux,aux2 ;
-  var telefono;
 
-  aux = datos.split("Tel.: "); 
-  aux2= aux[1].split("Datos para su factura");
-  telefono = aux2 [0];
-if (telefono[0]==='0') {
-  var tel = telefono.replace(/0/, "");
-}
-else {
-  tel=telefono;
-}
-}
-
-else
-{
-tel="";
-alert("NO TIENE TELEFONO CARGADO, pedirle telefono");
-
-}
-
-return tel;
-}
 
 function Procesar (str)
 {
@@ -175,8 +148,19 @@ function metodo (datosDeEnvio){
 
     }
     else {return ""}
+   
     
+    if (datos.indexOf("Datos para su factura")>0) 
+  {
     aux2 = aux[1].split("Datos para su factura");
+  }
+  else if (datos.indexOf("Factura")>0) 
+  {
+    aux2= aux[1].split("Fact");
+    
+  }
+
+    
     
     aux3= aux2[0].split("\n");
   

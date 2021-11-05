@@ -33,7 +33,7 @@
 <h4> <center><p id="SaludoHorario" ></p></center></h4>
 </div>
 <!--  method="POST" name="formInsert" action="CargarDatos.php" -->
-  <form   method="POST" name="formInsert" action="CargarDatos.php"  >
+ <form   method="POST" name="formInsert" action="CargarDatos.php"  >
 <script src="FuncionesGenerales.js"></script>
 <script src="Procesars.js"></script>
 <script src="LimpiarDatosBrutos.js"></script>
@@ -44,7 +44,7 @@
   <textarea  name="DatosBrutos" class="entrada" style="width : 800px" rows="4" id="idcomment"></textarea>
   <input class="oculto"  id="NOM" name="NombreCliente" value="" class="btn btn-primary" >
   <input class="oculto"  id="METODO" name="MetodoEntrega" value="" class="btn btn-primary" >
- <input class="oculto"  id="idTelefono" name="Telefono" value="" class="btn btn-primary" >
+ <input  id="idTelefono" name="Telefono" value="" class="btn btn-primary" >
   <input class="oculto"  id="idTipo" name="Tipo" value="" class="btn btn-primary" > 
 
 
@@ -57,7 +57,7 @@
 </div> 
 
 
-</form> 
+</form>
 
 <form class="nuevoRegVacio">
 <div class"nuevoRegVacio">
